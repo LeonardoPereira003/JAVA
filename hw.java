@@ -5,7 +5,7 @@ public class hw {
 // ------------------------------ CRIAÇAO DE VARIAVEL TIPO STRING ------------
         String solicitante = args[0];
         if (solicitante.equalsIgnoreCase("Professor")) {
-            System.out.println("Obrigado por me ensinar essa maravilha odiada por todos, espero me torna um grande Dev apartir de seus ensinamentos.");
+            System.out.printf(args[0] + " " + "Obrigado por me ensinar essa maravilha odiada por todos, espero me torna um grande Dev apartir de seus ensinamentos.");
         }
         else if (solicitante.equalsIgnoreCase("Estranho"));
             System.out.printf(args[0] + " " + "SAI PRA LÁ CURIOSO");
