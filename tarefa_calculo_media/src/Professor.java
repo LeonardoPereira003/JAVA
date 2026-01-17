@@ -15,6 +15,7 @@ public class Professor {
     public static void main (String args[]){
         aluno1();
         aluno2();
+        aluno3();
     }
     
 
@@ -38,19 +39,27 @@ public static void aluno1() {
 //Declarando a média do Aluno
 
     double media = (nota1 + nota2 + nota3 + nota4) / 4.0;
+    
+    boolean isVerificacao1 = media >= 7 && media <= 10;
+    boolean isVerificacao2 = media >= 5 && media <= 10;
 
-    boolean isVerificacao = media >= 6 && media <= 10;
 
 /***
  * Fomratação condicional para a media 
  */
-    if (isVerificacao) {
-        
+        if (isVerificacao1){
+            System.out.println( (media));
+            System.out.println( (aluno)+ ","  +  " " + ("Aprado."));
+        }
+        else if (isVerificacao2) {
+            System.out.println( (media));
+            System.out.println( (aluno)+ ","  +  " " + (" De Recuperação."));
+        } 
+        else {
+            System.out.println( (media));
+            System.out.println( (aluno)+ ","  +  " " + ("Reprovado."));
+        }
     }
-
-    System.out.println( (media));
-    System.out.println( (aluno)+ ","  +  " " + ("Aprado."));
-}
 
 
 /*** Aluno James Du Cato
@@ -70,25 +79,74 @@ public static void aluno2() {
     int nota3 = 2;
     int nota4 = 6;
 
+
+
 //Declarando a média do Aluno
 
     double media = (nota1 + nota2 + nota3 + nota4) / 4.0;
-
-    boolean isVerificacao = media >= 6 && media <= 10;
+    
+    boolean isVerificacao1 = media >= 7 && media <= 10;
+    boolean isVerificacao2 = media >= 5 && media <= 10;
 
 /***
  * Fomratação condicional para a media 
  */
-        if (isVerificacao){
+        if (isVerificacao1){
             System.out.println( (media));
             System.out.println( (aluno2)+ ","  +  " " + ("Aprado."));
         }
-        else{
+        else if (isVerificacao2) {
+            System.out.println( (media));
+            System.out.println( (aluno2)+ ","  +  " " + (" De Recuperação."));
+        } 
+        else {
             System.out.println( (media));
             System.out.println( (aluno2)+ ","  +  " " + ("Reprovado."));
         }
     }
 
+/*** Aluno James Du Cato
+ * Baderneiro
+ * Se eu pudesse tiraria nota
+ */
+
+public static void aluno3() {
+
+//Declarando o nome do Aluno
+
+    String aluno3 = ("BAYBE DO BAYBE DO TIRULAIBE LEIBE");
+
+//Declarand as notas do Aluno   
+    int nota1 = 3;
+    int nota2 = 1;
+    int nota3 = 2;
+    int nota4 = 6;
+
+
+
+//Declarando a média do Aluno
+
+    double media = (nota1 + nota2 + nota3 + nota4) / 4.0;
+    
+    boolean isVerificacao1 = media >= 7 && media <= 10;
+    boolean isVerificacao2 = media >= 5 && media <= 10;
+
+/***
+ * Fomratação condicional para a media 
+ */
+        if (isVerificacao1){
+            System.out.println( (media));
+            System.out.println( (aluno3)+ ","  +  " " + ("Aprado."));
+        }
+        else if (isVerificacao2) {
+            System.out.println( (media));
+            System.out.println( (aluno3)+ ","  +  " " + (" De Recuperação."));
+        } 
+        else {
+            System.out.println( (media));
+            System.out.println( (aluno3)+ ","  +  " " + ("Reprovado."));
+        }
+    }
 }
 
 
