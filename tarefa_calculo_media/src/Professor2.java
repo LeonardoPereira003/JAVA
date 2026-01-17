@@ -5,7 +5,7 @@ package tarefa_calculo_media.src;
  *  @author Leonardo Pereira
  */  
 
-public class Professor {
+public class Professor2 {
 
 /***
  * Os prints seram gerados aqui 
