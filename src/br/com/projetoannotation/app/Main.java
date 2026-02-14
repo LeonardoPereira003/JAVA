@@ -1,4 +1,4 @@
-package src.br.com.app;
+package src.br.com.projetoannotation.app;
 
 import src.br.com.projetoannotation.domain.*;
 import src.br.com.projetoannotation.annotation.*;
