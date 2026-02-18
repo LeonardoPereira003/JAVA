@@ -3,32 +3,14 @@ package com.leonardo.projeto2.dao.impl;
 import com.leonardo.projeto2.dao.INotaFiscalDAO;
 import com.leonardo.projeto2.domain.NotaFiscal;
 
-import java.util.*;
-
 /**
- * Implementação em memória do DAO de Nota Fiscal.
+ * DAO em memória para NotaFiscal.
  */
-public class NotaFiscalMapDAO implements INotaFiscalDAO {
-
-    private final Map<Long, NotaFiscal> banco = new HashMap<>();
-
-    @Override
-    public void salvar(NotaFiscal notaFiscal) {
-        banco.put(notaFiscal.getId(), notaFiscal);
-    }
+public class NotaFiscalMapDAO extends AbstractMapDAO<NotaFiscal, Long>
+        implements INotaFiscalDAO {
 
     @Override
-    public NotaFiscal buscarPorId(Long id) {
-        return banco.get(id);
-    }
-
-    @Override
-    public List<NotaFiscal> buscarTodos() {
-        return new ArrayList<>(banco.values());
-    }
-
-    @Override
-    public void remover(Long id) {
-        banco.remove(id);
+    protected Long getId(NotaFiscal entity) {
+        return entity.getId();
     }
 }

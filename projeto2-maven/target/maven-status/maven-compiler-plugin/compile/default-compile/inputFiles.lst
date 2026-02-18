@@ -1,5 +1,7 @@
 C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\app\Main.java
 C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\dao\IClienteDAO.java
+C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\dao\IGenericDAO.java
+C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\dao\impl\AbstractMapDAO.java
 C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\dao\impl\ClienteMapDAO.java
 C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\dao\impl\NotaFiscalMapDAO.java
 C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\dao\impl\ProdutoMapDAO.java
@@ -8,6 +10,8 @@ C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\d
 C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\domain\Cliente.java
 C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\domain\NotaFiscal.java
 C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\domain\Produto.java
+C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\service\AbstractService.java
 C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\service\ClienteService.java
+C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\service\IGenericService.java
 C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\service\NotaFiscalService.java
 C:\Users\LEO\Documents\JAVA\projeto2-maven\src\main\java\com\leonardo\projeto2\service\ProdutoService.java

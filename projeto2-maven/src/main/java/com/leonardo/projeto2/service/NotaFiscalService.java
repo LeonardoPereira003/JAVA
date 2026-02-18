@@ -3,32 +3,24 @@ package com.leonardo.projeto2.service;
 import com.leonardo.projeto2.dao.INotaFiscalDAO;
 import com.leonardo.projeto2.domain.NotaFiscal;
 
-import java.util.List;
-
 /**
- * Camada de regra de negócio da Nota Fiscal.
+ * Service responsável pelas regras de negócio da Nota Fiscal.
  */
-public class NotaFiscalService {
+public class NotaFiscalService
+        extends AbstractService<NotaFiscal, Long> {
 
-    private final INotaFiscalDAO notaFiscalDAO;
-
-    public NotaFiscalService(INotaFiscalDAO notaFiscalDAO) {
-        this.notaFiscalDAO = notaFiscalDAO;
+    public NotaFiscalService(INotaFiscalDAO dao) {
+        super(dao);
     }
 
+    /**
+     * Regra específica: emitir nota.
+     */
     public void emitirNota(NotaFiscal nota) {
-        notaFiscalDAO.salvar(nota);
-    }
+        if (nota.getProdutos().isEmpty()) {
+            throw new IllegalStateException("Nota fiscal deve ter pelo menos um produto.");
+        }
 
-    public NotaFiscal buscarPorId(Long id) {
-        return notaFiscalDAO.buscarPorId(id);
-    }
-
-    public List<NotaFiscal> listarTodas() {
-        return notaFiscalDAO.buscarTodos();
-    }
-
-    public void cancelarNota(Long id) {
-        notaFiscalDAO.remover(id);
+        salvar(nota);
     }
 }

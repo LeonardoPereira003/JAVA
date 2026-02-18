@@ -6,7 +6,11 @@ com\leonardo\projeto2\service\ClienteService.class
 com\leonardo\projeto2\app\Main.class
 com\leonardo\projeto2\dao\impl\NotaFiscalMapDAO.class
 com\leonardo\projeto2\dao\INotaFiscalDAO.class
+com\leonardo\projeto2\service\AbstractService.class
+com\leonardo\projeto2\service\IGenericService.class
 com\leonardo\projeto2\domain\Produto.class
+com\leonardo\projeto2\dao\IGenericDAO.class
+com\leonardo\projeto2\dao\impl\AbstractMapDAO.class
 com\leonardo\projeto2\dao\IProdutoDAO.class
 com\leonardo\projeto2\dao\impl\ClienteMapDAO.class
 com\leonardo\projeto2\domain\Cliente.class
