@@ -1,0 +1,11 @@
+br\com\rpires\dao\IContratoDao.class
+br\com\rpires\Cliente.class
+br\com\rpires\TesteCliente.class
+br\com\rpires\dao\ContratoDao.class
+br\com\rpires\service\ContratoService.class
+br\com\rpires\dao\mocks\ClienteDaoMock.class
+br\com\rpires\dao\ClienteDao.class
+br\com\rpires\dao\IClienteDao.class
+br\com\rpires\dao\mocks\ContratoDaoMock.class
+br\com\rpires\service\ClienteService.class
+br\com\rpires\service\IContratoService.class
