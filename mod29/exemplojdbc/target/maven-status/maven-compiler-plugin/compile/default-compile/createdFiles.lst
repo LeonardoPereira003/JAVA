@@ -1,0 +1,11 @@
+br\com\rpires\dao\jdbc\IVendaDAO.class
+br\com\rpires\dao\jdbc\VendaDAO.class
+br\com\rpires\domain\Venda.class
+br\com\rpires\dao\jdbc\ConnectionFactory.class
+br\com\rpires\App.class
+br\com\rpires\dao\jdbc\IProdutoDAO.class
+br\com\rpires\dao\jdbc\ClienteDAO.class
+br\com\rpires\domain\Cliente.class
+br\com\rpires\dao\jdbc\IClienteDAO.class
+br\com\rpires\domain\Produto.class
+br\com\rpires\dao\jdbc\ProdutoDAO.class
