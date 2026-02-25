@@ -10,9 +10,10 @@ MEU BANCO DE DADOS PARA A AJUDA DO TUTOR -->
 
 
 
+<!-- 
 
 
-<!-- DROP TABLE IF EXISTS tb_produto_quantidade CASCADE;
+DROP TABLE IF EXISTS tb_produto_quantidade CASCADE;
 DROP TABLE IF EXISTS tb_venda CASCADE;
 DROP TABLE IF EXISTS tb_produto CASCADE;
 DROP TABLE IF EXISTS tb_cliente CASCADE;
@@ -26,7 +27,7 @@ DROP TABLE IF EXISTS tb_cliente CASCADE;
 CREATE TABLE tb_cliente (
     id BIGSERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    cpf VARCHAR(11) UNIQUE NOT NULL,
+    cpf BIGINT UNIQUE NOT NULL,
     telefone BIGINT,
     endereco VARCHAR(200),
     numero INTEGER,
