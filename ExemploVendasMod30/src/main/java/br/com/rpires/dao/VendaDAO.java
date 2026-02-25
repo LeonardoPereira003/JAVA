@@ -1,7 +1,8 @@
 package br.com.rpires.dao;
 
 import java.sql.*;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 import br.com.rpires.dao.factory.ProdutoQuantidadeFactory;
 import br.com.rpires.dao.factory.VendaFactory;
@@ -12,6 +13,7 @@ import br.com.rpires.domain.Venda.Status;
 import br.com.rpires.exceptions.DAOException;
 import br.com.rpires.exceptions.MaisDeUmRegistroException;
 import br.com.rpires.exceptions.TableException;
+import br.com.rpires.exceptions.TipoChaveNaoEncontradaException;
 
 public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
 
@@ -36,12 +38,14 @@ public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
     // ================================
 
     @Override
-    public void finalizarVenda(Venda venda) throws DAOException {
+    public void finalizarVenda(Venda venda)
+            throws TipoChaveNaoEncontradaException, DAOException {
         atualizarStatus(venda, Status.CONCLUIDA);
     }
 
     @Override
-    public void cancelarVenda(Venda venda) throws DAOException {
+    public void cancelarVenda(Venda venda)
+            throws TipoChaveNaoEncontradaException, DAOException {
         atualizarStatus(venda, Status.CANCELADA);
     }
 
@@ -61,7 +65,7 @@ public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
     }
 
     // ================================
-    // INSERT VENDA (SEM SEQUENCE)
+    // INSERT VENDA
     // ================================
 
     @Override
@@ -94,7 +98,7 @@ public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
             SELECT V.ID AS ID_VENDA, V.CODIGO, V.VALOR_TOTAL,
                    V.DATA_VENDA, V.STATUS,
                    C.ID AS ID_CLIENTE, C.NOME, C.CPF,
-                   C.TEL, C.ENDERECO, C.NUMERO,
+                   C.TELEFONE, C.ENDERECO, C.NUMERO,
                    C.CIDADE, C.ESTADO
             FROM TB_VENDA V
             INNER JOIN TB_CLIENTE C ON V.ID_CLIENTE = C.ID
@@ -208,7 +212,7 @@ public class VendaDAO extends GenericDAO<Venda, String> implements IVendaDAO {
         }
     }
 
-    // Métodos não usados
+    // Métodos não utilizados
     @Override protected String getQueryExclusao() { throw new UnsupportedOperationException(); }
     @Override protected String getQueryAtualizacao() { throw new UnsupportedOperationException(); }
     @Override protected void setParametrosQueryExclusao(PreparedStatement s, String v) {}

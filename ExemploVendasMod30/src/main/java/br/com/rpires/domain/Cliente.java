@@ -25,7 +25,7 @@ public class Cliente implements Persistente {
 	@ColunaTabela(dbName = "cpf", setJavaName = "setCpf")
     private Long cpf;
     
-	@ColunaTabela(dbName = "tel", setJavaName = "setTel")
+	@ColunaTabela(dbName = "telefone", setJavaName = "setTel")
     private Long telefone;
     
 	@ColunaTabela(dbName = "endereco", setJavaName = "setEnd")

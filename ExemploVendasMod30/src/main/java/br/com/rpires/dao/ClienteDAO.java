@@ -28,7 +28,7 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
     protected String getQueryInsercao() {
         return """
             INSERT INTO TB_CLIENTE
-            (NOME, CPF, TEL, ENDERECO, NUMERO, CIDADE, ESTADO)
+            (NOME, CPF, TELEFONE, ENDERECO, NUMERO, CIDADE, ESTADO)
             VALUES (?,?,?,?,?,?,?)
         """;
     }
@@ -58,7 +58,7 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
     protected String getQueryAtualizacao() {
         return """
             UPDATE TB_CLIENTE SET
-            NOME = ?, TEL = ?, ENDERECO = ?, NUMERO = ?, CIDADE = ?, ESTADO = ?
+            NOME = ?, TELEFONE = ?, ENDERECO = ?, NUMERO = ?, CIDADE = ?, ESTADO = ?
             WHERE CPF = ?
         """;
     }
