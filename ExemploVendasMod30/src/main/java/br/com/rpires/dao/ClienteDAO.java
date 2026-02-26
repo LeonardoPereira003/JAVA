@@ -22,14 +22,15 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
         entityCadastrado.setNome(entity.getNome());
         entityCadastrado.setNumero(entity.getNumero());
         entityCadastrado.setTel(entity.getTel());
+        entityCadastrado.setEmail(entity.getEmail()); // NOVO CAMPO
     }
 
     @Override
     protected String getQueryInsercao() {
         return """
             INSERT INTO TB_CLIENTE
-            (NOME, CPF, TELEFONE, ENDERECO, NUMERO, CIDADE, ESTADO)
-            VALUES (?,?,?,?,?,?,?)
+            (NOME, CPF, TELEFONE, ENDERECO, NUMERO, CIDADE, ESTADO, EMAIL)
+            VALUES (?,?,?,?,?,?,?,?)
         """;
     }
 
@@ -42,6 +43,7 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
         stm.setInt(5, entity.getNumero());
         stm.setString(6, entity.getCidade());
         stm.setString(7, entity.getEstado());
+        stm.setString(8, entity.getEmail()); // NOVO CAMPO
     }
 
     @Override
@@ -58,7 +60,8 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
     protected String getQueryAtualizacao() {
         return """
             UPDATE TB_CLIENTE SET
-            NOME = ?, TELEFONE = ?, ENDERECO = ?, NUMERO = ?, CIDADE = ?, ESTADO = ?
+            NOME = ?, TELEFONE = ?, ENDERECO = ?, NUMERO = ?, 
+            CIDADE = ?, ESTADO = ?, EMAIL = ?
             WHERE CPF = ?
         """;
     }
@@ -71,7 +74,8 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
         stm.setInt(4, entity.getNumero());
         stm.setString(5, entity.getCidade());
         stm.setString(6, entity.getEstado());
-        stm.setLong(7, entity.getCpf());
+        stm.setString(7, entity.getEmail()); // NOVO CAMPO
+        stm.setLong(8, entity.getCpf());
     }
 
     @Override

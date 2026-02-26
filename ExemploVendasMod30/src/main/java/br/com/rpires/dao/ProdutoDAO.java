@@ -19,14 +19,15 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
         entityCadastrado.setDescricao(entity.getDescricao());
         entityCadastrado.setNome(entity.getNome());
         entityCadastrado.setValor(entity.getValor());
+        entityCadastrado.setQuantidadeEstoque(entity.getQuantidadeEstoque()); // NOVO CAMPO
     }
 
     @Override
     protected String getQueryInsercao() {
         return """
             INSERT INTO TB_PRODUTO
-            (CODIGO, NOME, DESCRICAO, VALOR)
-            VALUES (?,?,?,?)
+            (CODIGO, NOME, DESCRICAO, VALOR, QUANTIDADE_ESTOQUE)
+            VALUES (?,?,?,?,?)
         """;
     }
 
@@ -36,6 +37,7 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
         stm.setString(2, entity.getNome());
         stm.setString(3, entity.getDescricao());
         stm.setBigDecimal(4, entity.getValor());
+        stm.setInt(5, entity.getQuantidadeEstoque()); // NOVO CAMPO
     }
 
     @Override
@@ -52,7 +54,7 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
     protected String getQueryAtualizacao() {
         return """
             UPDATE TB_PRODUTO SET
-            NOME = ?, DESCRICAO = ?, VALOR = ?
+            NOME = ?, DESCRICAO = ?, VALOR = ?, QUANTIDADE_ESTOQUE = ?
             WHERE CODIGO = ?
         """;
     }
@@ -62,7 +64,8 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
         stm.setString(1, entity.getNome());
         stm.setString(2, entity.getDescricao());
         stm.setBigDecimal(3, entity.getValor());
-        stm.setString(4, entity.getCodigo());
+        stm.setInt(4, entity.getQuantidadeEstoque()); // NOVO CAMPO
+        stm.setString(5, entity.getCodigo());
     }
 
     @Override
