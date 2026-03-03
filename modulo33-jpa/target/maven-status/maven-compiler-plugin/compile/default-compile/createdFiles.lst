@@ -1,0 +1,6 @@
+br\com\pereira\domain\Documento.class
+br\com\pereira\domain\Acessorio.class
+br\com\pereira\domain\Carro.class
+br\com\pereira\domain\Marca.class
+br\com\pereira\util\JPAUtil.class
+br\com\pereira\App.class
