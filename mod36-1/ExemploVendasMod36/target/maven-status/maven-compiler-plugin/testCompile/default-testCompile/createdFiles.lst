@@ -1,0 +1,7 @@
+br\com\rpires\jpa\ClienteJpaDao2BancosTest.class
+br\com\rpires\jpa\AllTests.class
+br\com\rpires\jpa\ClienteJpaDao3BancosTest.class
+br\com\rpires\jpa\ClienteJpaDaoTest.class
+br\com\rpires\jpa\ProdutoJpaDAOTest.class
+br\com\rpires\jpa\VendaJpaDAOTest.class
+br\com\rpires\dao\VendaExclusaoJpaDAO.class
